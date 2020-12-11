@@ -1,0 +1,17 @@
+.navbarBrand{
+    width: 100px;
+    height: 40px;
+}
+.navbarAmazon{
+    background-color: #010101!important;
+    position: fixed;
+    width: 80%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    margin: 20px auto;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+}

@@ -1,0 +1,49 @@
+.card{
+    border-radius: 18px;
+    border-bottom: 6px solid #010101;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+.description{
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+.reviewMedia{
+    border-right: 6px solid #010101;
+    margin: 20px 0;
+    border-radius: 13px;
+    padding: 10px;
+    box-shadow: 3px 3px 16px rgba(0,0,0,0.2);
+}
+.rateBadge{
+    background-color: #010101;
+    color: white;
+    width: 60px;
+    padding: 3px;
+}
+.product-image{
+    height: 340px;
+    width:100%;
+    object-fit: cover;
+    filter: drop-shadow(2px 4px 8px #0000007a);
+}
+.productDetailsButton{
+    background-color: #010101!important;
+    border:#010101;
+    border-radius: 2px;
+}
+.selectCategory{
+    background-color: #010101;
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+.jumbotronImage{
+    background-image: url(../../assets/hero.jpeg);
+    background-color: transparent;
+    background-size: cover;
+}
