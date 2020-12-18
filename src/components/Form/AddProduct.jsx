@@ -17,7 +17,7 @@ class AddProduct extends React.Component {
         loading: false
     }
     //take formData from the file input 
-    HandleFile = (e) => {
+   HandleFile = (e) => {
         const formData = new FormData();
         formData.append("productPhoto", e.target.files[0]);
         console.log(formData);
@@ -44,6 +44,7 @@ class AddProduct extends React.Component {
             );
             if (response.ok) {
                 alert("new product added");
+             
             } else {
                 const error = await response.json();
                 console.log(error);
@@ -59,7 +60,7 @@ class AddProduct extends React.Component {
         e.preventDefault();
         this.setState({ loading: true })
         try {
-            let response = await fetch('http://localhost:3001/products/',
+            let response = await fetch('http://localhost:3001/products',
                 {
                     method: 'POST',
                     body: JSON.stringify(this.state.newProduct),
@@ -68,8 +69,10 @@ class AddProduct extends React.Component {
                     })
                 })
             if (response.ok) {
-                let data= await response.json();
-                this.PostImage(data.id)
+                alert("element added!")
+                let data = await response.json();
+                this.PostImage(data._id)
+                console.log(data)
                 this.setState({
                     newProduct: {
                         name: '',
@@ -123,7 +126,7 @@ class AddProduct extends React.Component {
                     ) :
                         (
                             <Container className="d-flex pt-5 mt-3 justify-content-center align-items-center text-center" fluid>
-                                <Form className="w-100 mt-5 d-flex justify-content-center align-items-center text-center" style={{ flexDirection: "column" }} onSubmit={this.submitnewProduct}>
+                                <Form className="mt-5 d-flex justify-content-center align-items-center text-center formproduct" style={{ flexDirection: "column" }} onSubmit={this.submitnewProduct}>
                                     <div className="formDiv">
                                     <Col md={12}>
                                         <Form.Group>

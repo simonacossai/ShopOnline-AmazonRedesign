@@ -1,0 +1,23 @@
+
+.review-card {
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    max-height: 150px;
+    min-height: 150px;
+    -webkit-transition: all 250ms ease-out;
+    -moz-transition: all 250ms ease-out;
+    -ms-transition: all 250ms ease-out;
+    -o-transition: all 250ms ease-out;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+    border-radius: 18px;
+    width: 250px;
+    padding: 20px 10px;
+  }
+  .product-image-detail{
+      width: 350px;
+  }

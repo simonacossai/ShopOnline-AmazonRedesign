@@ -31,7 +31,7 @@ export default class Home extends Component {
                     </Row>
                 </Container>
              
-                <ProductList />
+                <ProductList props={this.props}/>
                 <Container className="mt-5 pt-5">
                     <Jumbotron fluid className="jumbotronImage mt-5 px-2">
                         <h1>Discover your style!</h1>
