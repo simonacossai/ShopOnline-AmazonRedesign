@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import {Card, Button, Container, Row, Col, ThemeProvider} from 'react-bootstrap'
 import './SingleProduct.css';
+import {FaCartPlus} from 'react-icons/fa';
 
 export default class SingleProduct extends Component {
 
     render() {
         return (
                 <Col md={4}>
-                  <Card  className="card p-1 mb-2" > 
+                  <Card  className="card p-1 mb-2 mt-3" > 
+                  <div className="addToCart">
+                  <FaCartPlus className="addToCartIcon"/>
+                  </div>
                         <img variant="top" src={this.props.product.image} className="product-image "/>
                         <Card.Body>
                           <Card.Title>{this.props.product.name}</Card.Title>

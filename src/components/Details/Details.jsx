@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getReviews, fetchSingleProduct } from "../../api/api";
 import Carousel from './Carousel';
-import {Container, Row, Col} from 'react-bootstrap'
+import {Container, Row, Col, Badge} from 'react-bootstrap'
 
 export default class Details extends Component {
     state = {
@@ -16,20 +16,21 @@ export default class Details extends Component {
     };
     render() {
         return (
-            <Container className="my-5 py-5">
-                <Row className="my-5 pt-5">
-                    <Col md={6}>
+            <Container className="mb-5 mt-4 py-5">
+                <Row className="mb-5 mt-5 pt-5">
+                    <Col md={6} className="d-flex justify-content-center" >
                 <img src={this.state.product.image} className="product-image-detail"/>
                 </Col>
-                <Col md={6}>
-                    <h1>{this.state.product.name}</h1>
+                <Col md={6} >
+                    <h1 className="product-name text-center mb-3">- {this.state.product.name} -</h1>
                     <p>{this.state.product.description}</p>
                     <div className="d-flex justify-content-between">
-                    <span>{this.state.product.price}$</span>
-                    <span>{this.state.product.brand}</span>
+                    <h5>{this.state.product.price}$</h5>
+                    <h5>{this.state.product.brand}</h5>
                     </div>
                 </Col>
                 </Row>
+                <h2 className="text-center">What our clients think about it</h2>
                 <Carousel reviews={this.state.reviews} product={this.state.product}/>
             </Container>
         )

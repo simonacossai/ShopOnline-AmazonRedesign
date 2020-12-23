@@ -3,7 +3,7 @@
     border-bottom: 7px solid #010101;
     box-shadow: 3px 3px 16px rgba(0,0,0,0.2);
     margin-bottom: 20px;
-    background-color: rgb(252, 249, 245);
+    background-color: #ece6df;
     padding: 20px 0px;
     display:flex;
     justify-content: center;
@@ -53,4 +53,20 @@
     background-image: url(../../assets/hero.jpeg);
     background-color: transparent;
     background-size: cover;
+}
+.addToCart{
+    display: flex!important;
+    justify-content: flex-end!important;
+    text-align: right!important;
+    width: 100%;
+    padding: 15px 15px 0 0;
+}
+.addToCartIcon{
+    cursor: pointer;
+    font-size: 22px;
+    transition: .30s ease-in-out;
+}
+.addToCartIcon:hover{
+   color: rgb(17, 17, 17);
+   transition: .30s ease-in-out;
 }
