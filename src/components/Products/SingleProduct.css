@@ -1,72 +1,81 @@
-.card{
+.card {
     border-radius: 20px;
     border-bottom: 7px solid #010101;
-    box-shadow: 3px 3px 16px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
     background-color: #ece6df;
     padding: 20px 0px;
-    display:flex;
+    display: flex;
     justify-content: center;
+    max-width: 332px;
     align-items: center;
 }
-.description{
+
+.description {
     overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 2; /* number of lines to show */
-   -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
-.reviewMedia{
+
+.reviewMedia {
     border-right: 6px solid #010101;
     margin: 20px 0;
     border-radius: 13px;
     padding: 10px;
-    box-shadow: 3px 3px 16px rgba(0,0,0,0.2);
+    box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);
 }
-.rateBadge{
+
+.rateBadge {
     background-color: #010101;
     color: white;
     width: 60px;
     padding: 3px;
 }
-.product-image{
+
+.product-image {
     height: 300px;
-    width:300px;
+    width: 300px;
     object-fit: contain;
     transition: .50ms ease-in-out;
     filter: drop-shadow(2px 4px 8px #0000007a);
 }
 
-.productDetailsButton{
-    background-color: #010101!important;
-    border:#010101;
+.productDetailsButton {
+    background-color: #010101 !important;
+    border: #010101;
     border-radius: 2px;
 }
-.selectCategory{
+
+.selectCategory {
     background-color: #010101;
     color: #fff;
     padding: 4px 6px;
     border-radius: 4px;
 }
 
-.jumbotronImage{
+.jumbotronImage {
     background-image: url(../../assets/hero.jpeg);
     background-color: transparent;
     background-size: cover;
 }
-.addToCart{
-    display: flex!important;
-    justify-content: flex-end!important;
-    text-align: right!important;
+
+.addToCart {
+    display: flex !important;
+    justify-content: flex-end !important;
+    text-align: right !important;
     width: 100%;
     padding: 15px 15px 0 0;
 }
-.addToCartIcon{
+
+.addToCartIcon {
     cursor: pointer;
     font-size: 22px;
     transition: .30s ease-in-out;
 }
-.addToCartIcon:hover{
-   color: rgb(17, 17, 17);
-   transition: .30s ease-in-out;
+
+.addToCartIcon:hover {
+    color: rgb(17, 17, 17);
+    transition: .30s ease-in-out;
 }

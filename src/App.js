@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -10,39 +9,15 @@ import Cart from './components/Cart/Cart';
 
 function App() {
   return (
-    <>
-    <Router>
+  <>
+  <Router>
    <NavBar/>
-   <Route
-            path="/"
-            exact
-            render={(
-              props 
-            ) => <Home  {...props}/>} 
-          />
-      <Route
-            path="/addForm"
-            exact
-            render={(
-              props 
-            ) => <AddProduct  {...props}/>} 
-          />
-          <Route
-            path="/details/:id"
-            exact
-            render={(
-              props 
-            ) => <Details {...props}/>} 
-          />
-            <Route
-            path="/cart"
-            exact
-            render={(
-              props 
-            ) => <Cart {...props}/>} 
-          />
-   </Router>
-   </>
+   <Route path="/" exact render={(props) => <Home  {...props}/>} />
+   <Route path="/addForm" exact render={(props) => <AddProduct  {...props}/>} />
+   <Route path="/details/:id" exact render={(props) => <Details {...props}/>} />
+   <Route path="/cart" exact render={(props) => <Cart {...props}/>} />
+  </Router>
+  </>
   );
 }
 
