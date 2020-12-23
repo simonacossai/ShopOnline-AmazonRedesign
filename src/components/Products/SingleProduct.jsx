@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {Card, Button, Container, Row, Col, ThemeProvider} from 'react-bootstrap'
 import './SingleProduct.css';
 import {FaCartPlus} from 'react-icons/fa';
+import { addToCart } from "../../api/api";
 
 export default class SingleProduct extends Component {
 
@@ -10,7 +11,7 @@ export default class SingleProduct extends Component {
                 <Col md={4}>
                   <Card  className="card p-1 mb-2 mt-3" > 
                   <div className="addToCart">
-                  <FaCartPlus className="addToCartIcon"/>
+                  <FaCartPlus className="addToCartIcon" onClick={()=>addToCart(this.props.product._id)}/>
                   </div>
                         <img variant="top" src={this.props.product.image} className="product-image "/>
                         <Card.Body>

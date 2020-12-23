@@ -7,6 +7,7 @@ import { Link, withRouter } from 'react-router-dom'
 
 class NavBar extends Component {
     render() {
+      
         return (
             <Navbar bg="dark" variant="dark" expand="lg" className="navbarAmazon">
             <Navbar.Brand href="#home"><img src={logo} className="navbarBrand mt-1"/></Navbar.Brand>
@@ -19,7 +20,9 @@ class NavBar extends Component {
               <Link to="/addForm">
               <div className="nav-link">Add product</div>
               </Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
+              <Link to="/cart">
+              <div className="nav-link">Cart</div>
+              </Link>
             </Nav>
             <Form inline>
                 <InputGroup style={{ width: "240px" }}>

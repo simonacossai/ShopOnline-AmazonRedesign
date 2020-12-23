@@ -6,6 +6,8 @@ import NavBar from './components/Navbar/NavBar';
 import Home from './components/Home/Home';
 import AddProduct from './components/Form/AddProduct';
 import Details from './components/Details/Details';
+import Cart from './components/Cart/Cart';
+
 function App() {
   return (
     <>
@@ -31,6 +33,13 @@ function App() {
             render={(
               props 
             ) => <Details {...props}/>} 
+          />
+            <Route
+            path="/cart"
+            exact
+            render={(
+              props 
+            ) => <Cart {...props}/>} 
           />
    </Router>
    </>

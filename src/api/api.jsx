@@ -87,3 +87,69 @@ export async function getReviews(id){
     console.log(err);
   }
 }
+
+
+export async function getCartItem(){
+  try{
+    let response = await fetch(`http://localhost:3001/cart`)
+    if(response.ok){
+      let data= await response.json()
+      return data
+    }else{
+      alert("an error accurred")
+    }
+  }catch(err){
+    console.log(err);
+  }
+}
+
+
+export async function addToCart(id){
+  try{
+    let response = await fetch(`http://localhost:3001/cart/${id}`,
+    {
+      method: "POST"
+    })
+    if(response.ok){
+      alert("item added to cart successfully")
+    }else{
+      alert("an error accurred")
+    }
+  }catch(err){
+    console.log(err);
+  }
+}
+
+
+
+export async function deleteFromCart(id){
+  try{
+    let response = await fetch(`http://localhost:3001/cart/${id}`,
+    {
+      method: "DELETE"
+    })
+    if(response.ok){
+      alert("item removed from cart")
+    }else{
+      alert("an error accurred")
+      getCartItem()
+    }
+  }catch(err){
+    console.log(err);
+  }
+}
+
+
+export async function sendEmail(){
+  try{
+    let response = await fetch(`http://localhost:3001/cart/items/sendCatalogue`)
+    if(response.ok){
+      alert("check your email!")
+    }else{
+      alert("an error accurred")
+      getCartItem()
+    }
+  }catch(err){
+    console.log(err);
+  }
+}
