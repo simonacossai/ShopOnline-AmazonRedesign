@@ -70,7 +70,7 @@ export default class ProductList extends Component {
                         </select>
                     </Col>
                 </Row>
-                <Row className="mt-5 d-flex justify-content-center">
+                <Row className="mt-4 d-flex justify-content-center">
                     {this.state.alert && <Alert variant="success" style={{ zIndex: "20000", position: "fixed", maxWidth: "1000px", top: "100px" }}>
                         <h4>
                             Element successfully added to the cart!
